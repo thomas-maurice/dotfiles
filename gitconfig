@@ -1,0 +1,27 @@
+[user]
+    email = thomas@maurice.fr
+    name = "Thomas Maurice"
+    signingkey = 4DC087B6
+[push]
+	default = simple
+[commit]
+    gpgsign = false
+[alias]
+    ci = commit
+    co = checkout
+    cob = checkout -b
+    bs = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+    br = branch
+    st = status
+    gr = log --pretty=oneline --abbrev-commit --graph
+    lc = !git gr ORIG_HEAD.. --stat --no-merges
+    undo = git reset --soft HEAD^
+    alias = !git config -l | grep ^alias | cut -c 7- | sort
+    ammend = commit --ammend
+[core]
+    excludesfile = /home/thomas/.gitignore_global
+    whitespace = fix
+[apply]
+    whitespace = fix
+[url "git@devel.maurice.fr:"]
+    insteadOf = https://devel.maurice.fr/
