@@ -147,9 +147,8 @@ fi;
 export PROMPT_COMMAND="updatePrompt"
 export EDITOR=vim
 
-export GOROOT=$HOME/go
 export GOPATH=$HOME/workspace
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 # avoid duplicates.
 export HISTCONTROL=ignoredups:erasedups
@@ -157,3 +156,29 @@ export HISTCONTROL=ignoredups:erasedups
 # append history entries.
 shopt -s histappend
 
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+
+# append history entries..
+shopt -s histappend
+
+#Powerline
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bindings/bash/powerline.sh
+fi
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/thomas/google-cloud-sdk/path.bash.inc' ]; then . '/home/thomas/google-cloud-sdk/path.bash.inc'; fi
+
+if [ -d $HOME/bashrc.d ]; then
+    for f in `ls $HOME/bashrc.d`; do
+        source ${HOME}/bashrc.d/${f}
+    done;
+fi;
