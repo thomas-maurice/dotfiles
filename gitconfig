@@ -18,12 +18,12 @@
     undo = reset --soft HEAD^
     alias = !git config -l | grep ^alias | cut -c 7- | sort
     amend = commit -a --amend
-    pushdev = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [[ $BRANCH != 'master' ]] && [[ $BRANCH != '' ]] && [[ $BRANCH != 'prod' ]] && [[ $BRANCH != 'stag' ]]; then git push origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
-    pushdevf = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [[ $BRANCH != 'master' ]] && [[ $BRANCH != '' ]] && [[ $BRANCH != 'prod' ]] && [[ $BRANCH != 'stag' ]]; then git push -f origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
+    pushdev = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [ $BRANCH != 'master' ] && [ $BRANCH != '' ] && [ $BRANCH != 'prod' ] && [ $BRANCH != 'stag' ]; then git push origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
+    pushdevf = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [ $BRANCH != 'master' ] && [ $BRANCH != '' ] && [ $BRANCH != 'prod' ] && [ $BRANCH != 'stag' ]; then git push -f origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
 [core]
     excludesfile = /home/thomas/.gitignore_global
     whitespace = fix
 [apply]
     whitespace = fix
-[url "git@devel.maurice.fr:"]
-    insteadOf = https://devel.maurice.fr/
+[url "git@git.maurice.fr:"]
+    insteadOf = https://git.maurice.fr/

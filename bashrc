@@ -144,11 +144,11 @@ else
 fi;
 }
 
-export PROMPT_COMMAND="updatePrompt"
+#export PROMPT_COMMAND="updatePrompt"
 export EDITOR=vim
 
 export GOPATH=$HOME/workspace
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin:$HOME/.local/bin
 
 # avoid duplicates.
 export HISTCONTROL=ignoredups:erasedups
@@ -173,9 +173,6 @@ fi
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/thomas/google-cloud-sdk/path.bash.inc' ]; then . '/home/thomas/google-cloud-sdk/path.bash.inc'; fi
 
 if [ -d $HOME/bashrc.d ]; then
     for f in `ls $HOME/bashrc.d`; do
