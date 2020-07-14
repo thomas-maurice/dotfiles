@@ -1,0 +1,10 @@
+sops 3.4.0
+golang 1.14
+kustomize 3.4.0
+vault 1.4.2
+consul 1.6.2
+terraform 0.12.12
+kubectl 1.16.4
+gohugo 0.60.0
+minio 2020-06-03T22-13-49Z
+mc 2020-05-28T23-43-36Z
