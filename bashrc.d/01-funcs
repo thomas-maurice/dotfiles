@@ -123,7 +123,7 @@ upl () {
 
 sssh () {
     echo "checking the state of our vault token"
-    if ! vault token lookup 2>&1 > /dev/null; then
+    if ! vault token lookup > /dev/null 2>&1 ; then
         echo "logging into vault..."
         export VAULT_TOKEN=$(vault login -field=token -method=oidc)
     else
