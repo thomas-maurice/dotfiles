@@ -10,6 +10,10 @@
         "continuation": "continuation",
         "select": "select"
       }
+    },
+    "tmux": {
+      "colorscheme": "default",
+      "theme": "default"
     }
   }
 }
