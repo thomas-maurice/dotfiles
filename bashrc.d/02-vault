@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Generates a temporary SSH key and certificate
+gen_ssh_key() {
+    tmpDir=$(mktemp -d)
+    chmod 700 "${tmpDir}"
+    if ! [ -f "${tmpDir}"/id_ed25519 ]; then
+        ssh-keygen -t ed25519 -P '' -f "${tmpDir}"/id_ed25519 > /dev/null 2>&1
+        chmod 600 "${tmpDir}"/id_ed25519
+    fi;
+    if ! [ -f "${tmpDir}"/id_ed25519-cert.pub ]; then
+        vault write -field=signed_key prod/ssh/sign/ci public_key=@"${tmpDir}"/id_ed25519.pub > "${tmpDir}"/id_ed25519-cert.pub
+        chmod 600 "${tmpDir}"/id_ed25519-cert.pub
+    fi;
+    ssh-add "${tmpDir}"/id_ed25519
+}
+
+vault_gen_role_ids () {
+    for role in $(vault list -format=json  identity/oidc/role| grep -Ev ']' | grep -v '\[' | sed -e 's/^ *\"\(.*\)\",*$/\1/g'); do
+        client_id=$(vault read -format=json identity/oidc/role/${role} | jq -r .data.client_id);
+        echo "$role" "$client_id";
+    done;
+}
+
+sssh () {
+    echo "checking the state of our vault token"
+    if ! vault token lookup > /dev/null 2>&1 ; then
+        echo "logging into vault..."
+        VAULT_TOKEN=$(vault login -field=token -method=oidc)
+        export VAULT_TOKEN
+    else
+        echo "vault token is alright"
+    fi
+    echo "issuing a new certificate"
+    certfile=$(vault-cert ssh sign |& grep ' ->' | sed 's/^.* -> \(.*\)"$/\1/')
+    ssh -A -i $certfile -i $HOME/.ssh/id_rsa $@
+}
+
+vl () {
+    VAULT_TOKEN=$(vault login -field=token -method=oidc)
+    export VAULT_TOKEN
+}
+
+get_ssh_ca() {
+    for env in dev stag prod; do
+        key=$(vault-cert ssh ca -e ${env} | tr -d "\n")
+        if ! grep -q "${key}" ${HOME}/.ssh/known_hosts; then
+            echo "Adding ssh cert to known hosts file"
+            echo "@cert-authority * ${key}" >> ${HOME}/.ssh/known_hosts
+        fi
+    done
+}

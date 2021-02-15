@@ -106,10 +106,6 @@ newgpg(){
     gpg --list-keys
 }
 
-vl () {
-    export VAULT_TOKEN=$(vault login -field=token -method=oidc)
-}
-
 upl () {
     if [ -z "$1" ]; then
         echo "No file specified"
@@ -119,17 +115,4 @@ upl () {
     mc cp $1 minio/uploads/$(basename $1)
     #mc retention minio/uploads/$(basename $1) compliance 7d
     mc share download minio/uploads/$(basename $1) --json | jq -r .share
-}
-
-sssh () {
-    echo "checking the state of our vault token"
-    if ! vault token lookup > /dev/null 2>&1 ; then
-        echo "logging into vault..."
-        export VAULT_TOKEN=$(vault login -field=token -method=oidc)
-    else
-        echo "vault token is alright"
-    fi
-    echo "issuing a new certificate"
-    certfile=$(vault-cert ssh sign |& grep ' ->' | sed 's/^.* -> \(.*\)"$/\1/')
-    ssh -A -i $certfile -i $HOME/.ssh/id_rsa $@
 }
