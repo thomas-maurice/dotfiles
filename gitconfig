@@ -1,11 +1,11 @@
 [user]
     email = thomas@maurice.fr
     name = "Thomas Maurice"
-    signingkey = 4DC087B6
+    signingkey = "0x622A3B0779EFCC4E"
 [push]
 	default = simple
 [commit]
-    gpgsign = false
+    gpgsign = true
 [alias]
     ci = commit
     co = checkout
@@ -13,17 +13,30 @@
     bs = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     br = branch
     st = status
+    am = commit --amend
+    st = status
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
     gr = log --pretty=oneline --abbrev-commit --graph
     lc = !git gr ORIG_HEAD.. --stat --no-merges
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    f = fetch -p
+    ba = branch -a
+    rank = shortlog -sn --no-merges
+    sweep = "!git branch --merged | egrep -v '(^\\*|master|devel|stag|prod)' | xargs git branch -d"
     undo = reset --soft HEAD^
     alias = !git config -l | grep ^alias | cut -c 7- | sort
-    amend = commit -a --amend
-    pushdev = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [ $BRANCH != 'master' ] && [ $BRANCH != '' ] && [ $BRANCH != 'prod' ] && [ $BRANCH != 'stag' ]; then git push origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
-    pushdevf = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); if [ $BRANCH != 'master' ] && [ $BRANCH != '' ] && [ $BRANCH != 'prod' ] && [ $BRANCH != 'stag' ]; then git push -f origin $BRANCH; else echo 'Not doing pushdev on master/prod/stag or an empty branch'; fi"
+    amend = commit --amend
+    pullr = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); git pull --rebase origin $BRANCH"
+    pushdev = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); git push origin $BRANCH"
+    pushdevf = "!BRANCH=$(git branch | grep \\* | cut -d ' ' -f2); git push -f origin $BRANCH"
 [core]
     excludesfile = /home/thomas/.gitignore_global
     whitespace = fix
 [apply]
     whitespace = fix
-[url "git@git.maurice.fr:"]
+[url "ssh://gitea@git.maurice.fr/"]
     insteadOf = https://git.maurice.fr/
+[pull]
+    rebase = true

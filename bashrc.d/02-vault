@@ -43,9 +43,9 @@ vl () {
 
 get_ssh_ca() {
     for env in dev stag prod; do
-        key=$(vault-cert ssh ca -e ${env} | tr -d "\n")
+        key=$(vault read -format=json "${env}"/ssh/config/ca | jq -r .data.public_key | tr -d "\n")
         if ! grep -q "${key}" ${HOME}/.ssh/known_hosts; then
-            echo "Adding ssh cert to known hosts file"
+            echo "Adding ssh cert for env ${env} to known hosts file"
             echo "@cert-authority * ${key}" >> ${HOME}/.ssh/known_hosts
         fi
     done
