@@ -2,15 +2,19 @@
 	"segments": {
 		"right": [
 			{
-				"function": "powerline.segments.common.sys.uptime",
-				"priority": 50
-			},
-			{
 				"function": "powerline.segments.common.sys.system_load",
-				"priority": 50
+				"priority": 50,
+				"args": {
+					"short": true,
+					"format": "avg {avg}"
+				}
 			},
 			{
-				"function": "powerline.segments.common.time.date"
+				"function": "powerline.segments.common.time.date",
+				"args": {
+					"format": "%a %d %b",
+					"istime": false
+				}
 			},
 			{
 				"function": "powerline.segments.common.time.date",
@@ -21,7 +25,15 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.net.hostname"
+				"function": "powerline.segments.common.net.hostname",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.common.net.internal_ip"
+			},
+			{
+				"function": "powerline.segments.common.bat.battery",
+				"priority": 50
 			}
 		]
 	}

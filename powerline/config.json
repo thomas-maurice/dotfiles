@@ -4,15 +4,15 @@
   },
   "ext": {
     "shell": {
-      "colorscheme": "default",
-      "theme": "default_leftonly1",
+      "colorscheme": "tmaurice",
+      "theme": "tmaurice",
       "local_themes": {
         "continuation": "continuation",
         "select": "select"
       }
     },
     "tmux": {
-      "colorscheme": "default",
+      "colorscheme": "tmaurice",
       "theme": "default"
     }
   }
