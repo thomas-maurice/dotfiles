@@ -3,13 +3,15 @@
 	"groups": {
 		"hostname": {
 			"fg": "black",
-			"bg": "yellow",
+			"bg": "brightyellow",
 			"attrs": []
 		},
 		"environment": {
 			"fg": "white",
-			"bg": "darkestgreen",
-			"attrs": []
+			"bg": "steelblue",
+			"attrs": [
+				"bold"
+			]
 		},
 		"mode": {
 			"fg": "darkestgreen",
@@ -41,7 +43,7 @@
 			"attrs": []
 		},
 		"gitstatus_branch_clean": {
-			"fg": "green",
+			"fg": "gray8",
 			"bg": "gray2",
 			"attrs": []
 		},
