@@ -41,6 +41,8 @@ sudo apt-get install -y \
     lsof \
     lvm2 \
     mdadm \
+    moserial \
+    minicom \
     mtr-tiny \
     netcat \
     net-tools \
@@ -53,6 +55,7 @@ sudo apt-get install -y \
     protobuf-compiler \
     pv \
     pwgen \
+    scdaemon \
     strace \
     sudo \
     sysstat \
