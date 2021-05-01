@@ -45,8 +45,11 @@ sudo apt-get install -y \
     net-tools \
     network-manager \
     nitrogen \
+    nmap \
     openssl \
+    p7zip-full \
     powerline \
+    pv \
     pwgen \
     strace \
     sudo \
