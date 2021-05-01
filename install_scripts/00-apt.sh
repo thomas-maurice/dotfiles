@@ -28,6 +28,7 @@ sudo apt-get install -y \
     iputils-ping \
     iptables \
     jq \
+    keepassxc \
     libnotify-bin \
     libsqlite3-dev \
     libffi-dev \
