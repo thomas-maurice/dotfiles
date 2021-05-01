@@ -7,6 +7,7 @@ sudo apt-get install -y \
     arandr \
     arptables \
     bash-completion \
+    blueman \
     build-essential \
     bridge-utils \
     ca-certificates \
@@ -41,6 +42,7 @@ sudo apt-get install -y \
     mtr-tiny \
     netcat \
     net-tools \
+    network-manager \
     nitrogen \
     openssl \
     powerline \
