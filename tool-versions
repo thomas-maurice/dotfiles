@@ -1,5 +1,5 @@
 sops 3.4.0
-golang 1.15
+golang 1.16
 kustomize 3.8.6
 vault 1.6.1
 consul 1.6.2
