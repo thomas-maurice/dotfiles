@@ -25,7 +25,6 @@ sudo apt-get install -y \
     git \
     glusterfs-client \
     gnupg \
-    gnome-keyring \
     htop \
     iftop \
     ifstat \
@@ -55,7 +54,6 @@ sudo apt-get install -y \
     openssl \
     p7zip-full \
     powerline \
-    policykit-1-gnome \
     protobuf-compiler \
     pv \
     pwgen \

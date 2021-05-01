@@ -11,6 +11,8 @@ cat >> ~/autostart.d/log <<EOF
 
 EOF
 
+eval $(ssh-agent -s)
+
 if [ -d ~/autostart.d ]; then
     for f in ~/autostart.d/*.sh; do
         source "${f}" >> ~/autostart.d/log
