@@ -32,6 +32,7 @@ sudo apt-get install -y \
     jq \
     keepassxc \
     libnotify-bin \
+    libprotobuf-dev \
     libsqlite3-dev \
     libffi-dev \
     libssl-dev \
@@ -49,6 +50,7 @@ sudo apt-get install -y \
     openssl \
     p7zip-full \
     powerline \
+    protobuf-compiler \
     pv \
     pwgen \
     strace \
