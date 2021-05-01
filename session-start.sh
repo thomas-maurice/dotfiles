@@ -5,9 +5,6 @@ setxkbmap -option compose:rctrl
 
 xrdb -merge ~/.Xresources
 
-xset +fp ${HOME}/.fonts
-xset fp rehash
-
 cat >> ~/autostart.d/log <<EOF
 
 # New log starting at $(date) #####################################
