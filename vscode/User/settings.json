@@ -1,0 +1,21 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "go.formatTool": "goimports",
+    "vsicons.dontShowNewVersionMessage": true,
+    "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 0,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "go.toolsManagement.autoUpdate": true
+}

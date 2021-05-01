@@ -1,0 +1,3 @@
+! URxvt configuration
+URxvt*font: xft:Droid Sans Mono for Powerline:size=10
+URxvt*letterSpace: -2
