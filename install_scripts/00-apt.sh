@@ -36,6 +36,7 @@ sudo apt-get install -y \
     libsqlite3-dev \
     libffi-dev \
     libssl-dev \
+    light \
     locales-all \
     lsb-release \
     lsof \
