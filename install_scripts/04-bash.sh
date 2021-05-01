@@ -9,7 +9,11 @@ if ! [ -d ~/.asdf ]; then git clone https://github.com/asdf-vm/asdf.git ~/.asdf 
 
 cp tool-versions ~/.tool-versions
 
-for plugin in $(awk '{ print $1}' ~/.tool-versions); do asdf plugin-add ${plugin}; done
+for plugin in $(awk '{ print $1}' ~/.tool-versions); do
+    if ! asdf plugin-list | grep -q "${plugin}" ; then
+        asdf plugin-add "${plugin}";
+    fi;
+done
 
 (cd ~ && asdf install)
 
