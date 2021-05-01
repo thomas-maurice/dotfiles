@@ -17,6 +17,7 @@ sudo apt-get install -y \
     dnsutils \
     ebtables \
     feh \
+    ffmpeg \
     file \
     fonts-powerline \
     gawk \
@@ -56,5 +57,6 @@ sudo apt-get install -y \
     uuid-runtime \
     unzip \
     vim-nox \
+    vlc \
     wget \
     zip
