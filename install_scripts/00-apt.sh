@@ -3,6 +3,7 @@
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install -y \
+    apt-file \
     apt-transport-https \
     arandr \
     arptables \
@@ -24,6 +25,7 @@ sudo apt-get install -y \
     git \
     glusterfs-client \
     gnupg \
+    gnome-keyring \
     htop \
     iftop \
     ifstat \
@@ -53,6 +55,7 @@ sudo apt-get install -y \
     openssl \
     p7zip-full \
     powerline \
+    policykit-1-gnome \
     protobuf-compiler \
     pv \
     pwgen \
