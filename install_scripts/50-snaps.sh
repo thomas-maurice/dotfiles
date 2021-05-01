@@ -5,4 +5,4 @@ sudo snap install --stable spotify
 
 # vscode config
 mkdir -p ~/.config/Code/User || true
-cp vscode/settings.json ~/.config/Code/User
+cp vscode/User/settings.json ~/.config/Code/User
