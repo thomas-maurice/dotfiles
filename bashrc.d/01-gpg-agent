@@ -2,3 +2,6 @@
 
 export GPG_TTY="$(tty)"
 gpgconf --launch gpg-agent
+
+# if you wish to use the gpg agent as an ssh agent
+# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)

@@ -116,3 +116,66 @@ upl () {
     #mc retention minio/uploads/$(basename $1) compliance 7d
     mc share download minio/uploads/$(basename $1) --json | jq -r .share
 }
+
+# Connects to a host with a vault certificate
+sssh () {
+    echo "checking the state of our vault token"
+    if ! vault token lookup > /dev/null 2>&1 ; then
+        echo "logging into vault..."
+        vl
+    else
+        echo "vault token is alright"
+    fi
+    echo "issuing a new certificate"
+
+    ssh_data=$(tempfile --prefix=ssh-data)
+    vault-cert ssh sign -p $USER,root > ${ssh_data}
+    key=$(jq -r .data.key < ${ssh_data})
+    cert=$(jq -r .data.certPath < ${ssh_data})
+    echo "using key ${key} and cert ${cert}"
+    ssh -i ${cert} -i ${key} $@
+}
+
+minio_get_binary() {
+	local binary_name=$1
+    local local_name=$2
+
+	if [ -z "${MINIO_NAME}" ]; then
+		echo "MINIO_NAME unset"
+		return 1
+	fi;
+
+	if [ -z "${MINIO_BINARY_BUCKET}" ]; then
+		echo "MINIO_BINARY_BUCKET unset"
+		return 1
+	fi;
+
+    if [ -z "$binary_name" ]; then
+        echo "Binary name is empty"
+        return 1
+    fi;
+
+    if [ -z "$local_name" ]; then
+        echo "Using $binary_name as the local name"
+        local_name=${binary_name}
+    fi;
+
+    echo "Retrieving the binary ${binary_name}"
+
+    mc cp ${MINIO_NAME}/${MINIO_BINARY_BUCKET}/${binary_name}/${binary_name}.sig /tmp/${binary_name}.sig
+    mc cp ${MINIO_NAME}/${MINIO_BINARY_BUCKET}/${binary_name}/${binary_name} /tmp/${binary_name}
+    chmod +x /tmp/${binary_name}
+
+    if ! gpg --verify /tmp/${binary_name}.sig /tmp/${binary_name}; then
+        echo "The signature is not valid"
+        return 1
+    fi;
+
+    cp /tmp/${binary_name} ~/bin/${local_name}
+}
+
+update_binaries() {
+	minio_get_binary vault-cert vault-cert
+	minio_get_binary ezcrypt ezcrypt
+	minio_get_binary reddit_grabber reddit_grabber
+}
