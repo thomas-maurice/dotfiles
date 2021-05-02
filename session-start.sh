@@ -16,13 +16,14 @@ if [ -f ~/.ssh/agent.env ] ; then
     if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
         echo "Stale agent file found. Spawning a new agent. "
         eval $(ssh-agent | tee ~/.ssh/agent.env)
-        ssh-add
     fi
 else
     echo "Starting ssh-agent"
     eval $(ssh-agent | tee ~/.ssh/agent.env)
-    ssh-add
 fi
+
+ln -sf "${SSH_AUTH_SOCK}" "${HOME}/.ssh/ssh-agent.sock"
+export SSH_AUTH_SOCK="${HOME}/.ssh/ssh-agent.sock"
 
 if [ -d ~/autostart.d ]; then
     for f in ~/autostart.d/*.sh; do
