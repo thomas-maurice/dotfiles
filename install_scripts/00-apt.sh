@@ -57,6 +57,8 @@ sudo apt-get install -y \
     protobuf-compiler \
     pv \
     pwgen \
+    python3 \
+    python3-pip \
     scdaemon \
     strace \
     sudo \
