@@ -19,3 +19,6 @@ done
 
 cp bashrc ~/.bashrc
 cp -r bashrc.d ~
+
+# build YCM with Go support
+(cd ~/.vim/bundle/YouCompleteMe/ && ./install.py --go-completer)
