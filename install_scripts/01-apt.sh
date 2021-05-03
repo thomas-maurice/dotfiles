@@ -7,6 +7,9 @@ sudo apt-get install -y \
     apt-transport-https \
     arandr \
     arptables \
+    avr-libc \
+    binutils-avr \
+    avrdude \
     bash-completion \
     blueman \
     build-essential \
@@ -23,6 +26,7 @@ sudo apt-get install -y \
     file \
     fonts-powerline \
     gawk \
+    gcc-avr \
     git \
     glusterfs-client \
     gnupg \
