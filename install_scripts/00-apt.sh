@@ -14,6 +14,7 @@ sudo apt-get install -y \
     ca-certificates \
     cmake \
     coreutils \
+    cryptsetup \
     curl \
     dnsutils \
     ebtables \
@@ -71,4 +72,7 @@ sudo apt-get install -y \
     vim-nox \
     vlc \
     wget \
+    yubikey-personalization \
+    yubikey-personalization-gui \
+    yubikey-luks \
     zip
