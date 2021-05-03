@@ -1,0 +1,4 @@
+#!/bin/bash
+
+CONFIGURED_USER=${CONFIGURED_USER:-thomas}
+INSTALL_I3=${INSTALL_I3:-}

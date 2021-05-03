@@ -1,5 +1,7 @@
 #!/bin/bash
 
+if [ -n "${INSTALL_I3}" ]; then
+
 sudo apt-get install -y \
     build-essential \
     git cmake cmake-data pkg-config \
@@ -19,3 +21,5 @@ if ! [ -d ~/.compile/polybar ]; then git clone --recursive https://github.com/po
 (cd ~/.compile/polybar && ./build.sh -A --all-features -f -C -g -j 4)
 
 if ! [ -d ~/.config/polybar ]; then mkdir ~/.config/polybar; cp /usr/local/share/doc/polybar/config ~/.config/polybar; fi
+
+fi;
