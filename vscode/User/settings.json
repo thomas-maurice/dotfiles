@@ -1,6 +1,10 @@
 {
     "workbench.iconTheme": "vscode-icons",
     "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [
+        "--fast"
+    ],
     "vsicons.dontShowNewVersionMessage": true,
     "terminal.integrated.fontFamily": "Roboto Mono for Powerline",
     "files.autoSave": "afterDelay",

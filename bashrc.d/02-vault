@@ -50,3 +50,12 @@ get_ssh_ca() {
         fi
     done
 }
+
+setup_ssh_ca() {
+    for env in prod dev stag; do
+        KEY=$(vault read -field=public_key ${env}/ssh/config/ca | head -n 1)
+        if ! grep -q "${KEY}" ${HOME}/.ssh/known_hosts; then
+            echo "@cert-authority * ${KEY}" | tee -a ${HOME}/.ssh/known_hosts
+        fi;
+    done;
+}

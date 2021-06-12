@@ -1,0 +1,15 @@
+AddKeysToAgent yes
+
+Host *
+    ForwardAgent yes
+    ForwardX11 no
+    Protocol 2
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+    IdentityFile ~/.ssh/id_ed25519
+    User adm
+
+Host git.maurice.fr
+    HostName git.maurice.fr
+    Port 2222
+    User gitea
