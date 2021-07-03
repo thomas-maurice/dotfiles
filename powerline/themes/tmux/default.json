@@ -11,6 +11,35 @@
 				}
 			},
 			{
+				"function": "gowerline.gowerline.gwl",
+				"priority": 60,
+				"args": {
+					"function": "ticker",
+					"ticker": "CFLT"
+				}
+			},
+			{
+				"function": "gowerline.gowerline.gwl",
+				"priority": 30,
+				"before": "🔐 ",
+				"args": {
+					"function": "vault",
+					"template": "{{ .DisplayName }}: {{ .RenderedExpiry }}",
+					"expired_theme": true
+				}
+			},
+			{
+				"function": "powerline.segments.common.net.internal_ip"
+			},
+			{
+				"function": "powerline.segments.common.net.hostname",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.common.bat.battery",
+				"priority": 50
+			},
+			{
 				"function": "powerline.segments.common.time.date",
 				"args": {
 					"format": "%a %d %b",
@@ -24,17 +53,6 @@
 					"format": "%H:%M:%S",
 					"istime": true
 				}
-			},
-			{
-				"function": "powerline.segments.common.net.hostname",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.net.internal_ip"
-			},
-			{
-				"function": "powerline.segments.common.bat.battery",
-				"priority": 50
 			}
 		]
 	}

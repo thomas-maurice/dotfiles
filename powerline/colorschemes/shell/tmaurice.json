@@ -6,6 +6,11 @@
 			"bg": "brightyellow",
 			"attrs": []
 		},
+		"gwl": {
+			"fg": "brightyellow",
+			"bg": "black",
+			"attrs": []
+		},
 		"environment": {
 			"fg": "white",
 			"bg": "steelblue",
