@@ -2,9 +2,10 @@
 	"segments": {
 		"left": [
 			{
-				"function": "powerline.segments.common.env.environment",
-				"priority": 50,
+				"function": "gowerline.gowerline.gwl",
+				"priority": 10,
 				"args": {
+					"function": "colourenv",
 					"variable": "CAAS_ENV"
 				},
 				"before": "☁  "

@@ -20,7 +20,7 @@
 			},
 			{
 				"function": "gowerline.gowerline.gwl",
-				"priority": 30,
+				"priority": 50,
 				"before": "🔐 ",
 				"args": {
 					"function": "vault",
@@ -29,11 +29,12 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.net.internal_ip"
+				"function": "powerline.segments.common.net.internal_ip",
+				"priority": 60
 			},
 			{
 				"function": "powerline.segments.common.net.hostname",
-				"priority": 10
+				"priority": 60
 			},
 			{
 				"function": "powerline.segments.common.bat.battery",
@@ -44,7 +45,8 @@
 				"args": {
 					"format": "%a %d %b",
 					"istime": false
-				}
+				},
+				"priority": 50
 			},
 			{
 				"function": "powerline.segments.common.time.date",
@@ -52,7 +54,8 @@
 				"args": {
 					"format": "%H:%M:%S",
 					"istime": true
-				}
+				},
+				"priority": 50
 			}
 		]
 	}

@@ -2,25 +2,65 @@
 	"name": "Default",
 	"groups": {
 		"gwl:ticker_up": {
-			"fg": "green",
-			"bg": "gray0",
+			"fg": "darkgreen",
+			"bg": "black",
 			"attrs": [
 				"bold"
 			]
 		},
 		"gwl:ticker_down": {
-			"fg": "red",
-			"bg": "gray10",
+			"fg": "brightred",
+			"bg": "black",
 			"attrs": [
 				"bold"
 			]
 		},
 		"gwl:ticker": {
 			"fg": "yellow",
+			"bg": "black",
+			"attrs": [
+				"bold"
+			]
+		},
+		"gwl:vault": {
+			"fg": "red",
+			"bg": "gray10",
+			"attrs": [
+				"bold"
+			]
+		},
+		"gwl:vault_expired": {
+			"fg": "yellow",
 			"bg": "gray0",
 			"attrs": [
 				"bold"
 			]
+		},
+		"gwl:env_prod": {
+			"fg": "white",
+			"bg": "brightred",
+			"attrs": [
+				"bold"
+			]
+		},
+		"gwl:env_stag": {
+			"fg": "white",
+			"bg": "mediumorange",
+			"attrs": [
+				"bold"
+			]
+		},
+		"gwl:env_devel": {
+			"fg": "white",
+			"bg": "mediumpurple",
+			"attrs": [
+				"bold"
+			]
+		},
+		"gwl": {
+			"fg": "gray9",
+			"bg": "gray4",
+			"attrs": []
 		},
 		"information:additional": {
 			"fg": "gray9",
