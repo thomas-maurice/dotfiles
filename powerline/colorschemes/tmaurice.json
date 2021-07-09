@@ -43,6 +43,13 @@
 				"bold"
 			]
 		},
+		"gwl:kube_context": {
+			"fg": "white",
+			"bg": "darkred",
+			"attrs": [
+				"bold"
+			]
+		},
 		"gwl:env_stag": {
 			"fg": "white",
 			"bg": "mediumorange",

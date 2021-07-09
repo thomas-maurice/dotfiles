@@ -3,12 +3,13 @@
 		"left": [],
 		"right": [
 			{
-				"function": "powerline.segments.common.sys.system_load",
-				"priority": 50,
+				"function": "gowerline.gowerline.gwl",
+				"priority": 60,
 				"args": {
-					"short": true,
-					"format": "avg {avg}"
-				}
+					"function": "bash",
+					"cmd": "kubeContext"
+				},
+				"before": "⎈ "
 			},
 			{
 				"function": "gowerline.gowerline.gwl",
