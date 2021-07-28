@@ -174,8 +174,10 @@ fi
 
 . $HOME/.asdf/completions/asdf.bash
 
+if ! [ -d ~/.logs ]; then mkdir ~/.logs; fi;
+
 if [ -d $HOME/bashrc.d ]; then
     for f in `ls $HOME/bashrc.d`; do
-        source ${HOME}/bashrc.d/${f}
+        source ${HOME}/bashrc.d/${f} >> ~/.logs/bashrc.log 2>&1 || true
     done;
 fi;
