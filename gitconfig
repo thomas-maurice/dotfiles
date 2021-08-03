@@ -12,6 +12,7 @@
     cob = checkout -b
     bs = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     br = branch
+    rbi = "!git rebase -i $(git rev-list --first-parent master | head -1)"
     st = status
     am = commit --amend
     st = status
