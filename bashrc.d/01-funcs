@@ -179,3 +179,7 @@ update_binaries() {
     minio_get_binary ezcrypt ezcrypt
     minio_get_binary reddit_grabber reddit_grabber
 }
+
+dockerclean() {
+    docker system prune -af
+}
