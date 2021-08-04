@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if which pew; then
+    source "$(pew shell_config)
+fi;
