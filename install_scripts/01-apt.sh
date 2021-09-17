@@ -64,11 +64,13 @@ sudo apt-get install -y \
     pwgen \
     python3 \
     python3-pip \
+    smartmontools \
     scdaemon \
     strace \
     sudo \
     sysstat \
     telnet \
+    terminator \
     tcpdump \
     tmux \
     uuid-runtime \
