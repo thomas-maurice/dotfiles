@@ -51,6 +51,7 @@ sudo apt-get install -y \
     moserial \
     minicom \
     mtr-tiny \
+    neofetch \
     netcat \
     net-tools \
     network-manager \
