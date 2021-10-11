@@ -64,6 +64,13 @@
 				"bold"
 			]
 		},
+		"gwl:public_ip": {
+			"fg": "white",
+			"bg": "mediumpurple",
+			"attrs": [
+				"bold"
+			]
+		},
 		"gwl": {
 			"fg": "gray9",
 			"bg": "gray4",

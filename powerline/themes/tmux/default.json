@@ -38,6 +38,14 @@
 				"priority": 60
 			},
 			{
+				"function": "gowerline.gowerline.gwl",
+				"priority": 60,
+                "before": "🌍 ",
+				"args": {
+					"function": "public_ip"
+				}
+			},
+			{
 				"function": "powerline.segments.common.bat.battery",
 				"priority": 50
 			},
