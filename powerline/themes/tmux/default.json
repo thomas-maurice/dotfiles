@@ -4,7 +4,7 @@
 		"right": [
 			{
 				"function": "gowerline.gowerline.gwl",
-				"priority": 60,
+				"priority": 65,
 				"args": {
 					"function": "bash",
 					"cmd": "kubeContext"
@@ -13,7 +13,7 @@
 			},
 			{
 				"function": "gowerline.gowerline.gwl",
-				"priority": 60,
+				"priority": 100,
 				"args": {
 					"function": "ticker",
 					"ticker": "CFLT"
@@ -21,7 +21,7 @@
 			},
 			{
 				"function": "gowerline.gowerline.gwl",
-				"priority": 50,
+				"priority": 60,
 				"before": "🔐 ",
 				"args": {
 					"function": "vault",
@@ -30,16 +30,12 @@
 				}
 			},
 			{
-				"function": "powerline.segments.common.net.internal_ip",
-				"priority": 60
-			},
-			{
 				"function": "powerline.segments.common.net.hostname",
-				"priority": 60
+				"priority": 67
 			},
 			{
 				"function": "gowerline.gowerline.gwl",
-				"priority": 60,
+				"priority": 64,
                 "before": "🌍 ",
 				"args": {
 					"function": "public_ip"
@@ -48,6 +44,14 @@
 			{
 				"function": "powerline.segments.common.bat.battery",
 				"priority": 50
+			},
+			{
+				"function": "gowerline.gowerline.gwl",
+				"priority": 60,
+				"args": {
+					"function": "bash",
+                    "cmd": "apt"
+				}
 			},
 			{
 				"function": "powerline.segments.common.time.date",
