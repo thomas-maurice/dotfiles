@@ -7,7 +7,9 @@
 			},
 			{
 				"type": "string",
-				"highlight_groups": ["background"],
+				"highlight_groups": [
+					"background"
+				],
 				"draw_soft_divider": false,
 				"draw_hard_divider": false,
 				"width": "auto"

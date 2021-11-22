@@ -3,26 +3,43 @@
 		"left": [
 			{
 				"function": "mode",
-				"exclude_modes": ["nc"]
+				"exclude_modes": [
+					"nc"
+				]
 			},
 			{
 				"function": "visual_range",
-				"include_modes": ["v", "V", "^V", "s", "S", "^S"],
+				"include_modes": [
+					"v",
+					"V",
+					"^V",
+					"s",
+					"S",
+					"^S"
+				],
 				"priority": 10
 			},
 			{
 				"function": "paste_indicator",
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"priority": 10
 			},
 			{
 				"function": "powerline.segments.vim.plugin.capslock.capslock_indicator",
-				"include_modes": ["i", "R", "Rv"],
+				"include_modes": [
+					"i",
+					"R",
+					"Rv"
+				],
 				"priority": 10
 			},
 			{
 				"function": "branch",
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"priority": 30
 			},
 			{
@@ -53,25 +70,35 @@
 				"before": " "
 			},
 			{
-				"exclude_modes": ["i", "R", "Rv"],
+				"exclude_modes": [
+					"i",
+					"R",
+					"Rv"
+				],
 				"function": "trailing_whitespace",
 				"display": false,
 				"priority": 60
 			},
 			{
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"function": "powerline.segments.vim.plugin.syntastic.syntastic",
 				"priority": 50
 			},
 			{
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"function": "powerline.segments.vim.plugin.tagbar.current_tag",
 				"draw_soft_divider": false,
 				"priority": 50
 			},
 			{
 				"type": "string",
-				"highlight_groups": ["background"],
+				"highlight_groups": [
+					"background"
+				],
 				"draw_soft_divider": false,
 				"draw_hard_divider": false,
 				"width": "auto"
@@ -81,17 +108,23 @@
 			{
 				"function": "file_format",
 				"draw_soft_divider": false,
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"priority": 60
 			},
 			{
 				"function": "file_encoding",
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"priority": 60
 			},
 			{
 				"function": "file_type",
-				"exclude_modes": ["nc"],
+				"exclude_modes": [
+					"nc"
+				],
 				"priority": 60
 			},
 			{
@@ -107,7 +140,10 @@
 			{
 				"type": "string",
 				"name": "line_current_symbol",
-				"highlight_groups": ["line_current_symbol", "line_current"]
+				"highlight_groups": [
+					"line_current_symbol",
+					"line_current"
+				]
 			},
 			{
 				"function": "line_current",

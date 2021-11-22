@@ -4,7 +4,9 @@
 			{
 				"type": "string",
 				"contents": "Command-T",
-				"highlight_groups": ["commandt:label"]
+				"highlight_groups": [
+					"commandt:label"
+				]
 			},
 			{
 				"function": "powerline.segments.vim.plugin.commandt.finder"
@@ -14,13 +16,14 @@
 			},
 			{
 				"type": "string",
-				"highlight_groups": ["commandt:background"],
+				"highlight_groups": [
+					"commandt:background"
+				],
 				"draw_soft_divider": false,
 				"draw_hard_divider": false,
 				"width": "auto"
 			}
 		],
-		"right": [
-		]
+		"right": []
 	}
 }

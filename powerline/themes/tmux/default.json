@@ -16,7 +16,8 @@
 				"priority": 100,
 				"args": {
 					"function": "ticker",
-					"ticker": "CFLT"
+					"ticker": "CFLT",
+					"includeDirection": true
 				}
 			},
 			{
@@ -36,7 +37,7 @@
 			{
 				"function": "gowerline.gowerline.gwl",
 				"priority": 64,
-                "before": "🌍 ",
+				"before": "🌍 ",
 				"args": {
 					"function": "public_ip"
 				}
@@ -50,7 +51,7 @@
 				"priority": 60,
 				"args": {
 					"function": "bash",
-                    "cmd": "apt"
+					"cmd": "apt"
 				}
 			},
 			{

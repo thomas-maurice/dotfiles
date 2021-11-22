@@ -27,21 +27,18 @@
 			"args": {
 				"state_symbols": {
 					"fallback": "",
-					"play":     ">",
-					"pause":    "~",
-					"stop":     "X"
+					"play": ">",
+					"pause": "~",
+					"stop": "X"
 				}
 			}
 		},
-
 		"line_current_symbol": {
 			"contents": "LN "
 		},
-
 		"time": {
 			"before": ""
 		},
-
 		"powerline.segments.common.net.network_load": {
 			"args": {
 				"recv_format": "DL {value:>8}",
@@ -71,18 +68,18 @@
 		"powerline.segments.common.wthr.weather": {
 			"args": {
 				"icons": {
-					"day":           "DAY",
-					"blustery":      "WIND",
-					"rainy":         "RAIN",
-					"cloudy":        "CLOUDS",
-					"snowy":         "SNOW",
-					"stormy":        "STORM",
-					"foggy":         "FOG",
-					"sunny":         "SUN",
-					"night":         "NIGHT",
-					"windy":         "WINDY",
+					"day": "DAY",
+					"blustery": "WIND",
+					"rainy": "RAIN",
+					"cloudy": "CLOUDS",
+					"snowy": "SNOW",
+					"stormy": "STORM",
+					"foggy": "FOG",
+					"sunny": "SUN",
+					"night": "NIGHT",
+					"windy": "WINDY",
 					"not_available": "NA",
-					"unknown":       "UKN"
+					"unknown": "UKN"
 				},
 				"temp_format": "{temp:.0f} C"
 			}
@@ -92,33 +89,32 @@
 				"unicode_text": false
 			}
 		},
-
 		"powerline.segments.vim.mode": {
 			"args": {
 				"override": {
-					"n":  "NORMAL",
+					"n": "NORMAL",
 					"no": "N-OPER",
-					"v":  "VISUAL",
-					"V":  "V-LINE",
+					"v": "VISUAL",
+					"V": "V-LINE",
 					"^V": "V-BLCK",
-					"s":  "SELECT",
-					"S":  "S-LINE",
+					"s": "SELECT",
+					"S": "S-LINE",
 					"^S": "S-BLCK",
-					"i":  "INSERT",
+					"i": "INSERT",
 					"ic": "I-COMP",
 					"ix": "I-C_X ",
-					"R":  "RPLACE",
+					"R": "RPLACE",
 					"Rv": "V-RPLC",
 					"Rc": "R-COMP",
 					"Rx": "R-C_X ",
-					"c":  "COMMND",
+					"c": "COMMND",
 					"cv": "VIM-EX",
 					"ce": "NRM-EX",
-					"r":  "PROMPT",
+					"r": "PROMPT",
 					"rm": "-MORE-",
 					"r?": "CNFIRM",
-					"!":  "!SHELL",
-					"t":  "TERM  "
+					"!": "!SHELL",
+					"t": "TERM  "
 				}
 			}
 		},
@@ -140,7 +136,6 @@
 				"text": "+"
 			}
 		},
-
 		"powerline.segments.i3wm.scratchpad": {
 			"args": {
 				"icons": {

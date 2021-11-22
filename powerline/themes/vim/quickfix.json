@@ -9,7 +9,9 @@
 			{
 				"type": "string",
 				"name": "buffer_name",
-				"highlight_groups": ["file_name"]
+				"highlight_groups": [
+					"file_name"
+				]
 			},
 			{
 				"function": "window_title",
@@ -17,7 +19,9 @@
 			},
 			{
 				"type": "string",
-				"highlight_groups": ["background"],
+				"highlight_groups": [
+					"background"
+				],
 				"draw_soft_divider": false,
 				"draw_hard_divider": false,
 				"width": "auto"
@@ -27,7 +31,10 @@
 			{
 				"type": "string",
 				"name": "line_current_symbol",
-				"highlight_groups": ["line_current_symbol", "line_current"]
+				"highlight_groups": [
+					"line_current_symbol",
+					"line_current"
+				]
 			},
 			{
 				"function": "line_current",
