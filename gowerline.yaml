@@ -1,0 +1,49 @@
+---
+debug: false
+listen:
+    unix: ~/.gowerline/server.sock
+plugins:
+    - name: network
+    - name: time
+      config:
+      # no config needed
+    - name: finnhub
+      disabled: false
+      config:
+          refresh: 2m
+          token: CHANGEME
+          tickers:
+              - CFLT
+              - FB
+              - MSFT
+              - AAPL
+              - GOOG
+              - AMZN
+    - name: vault
+      config:
+      # no config needed
+    - name: colourenv
+      config:
+          variables:
+              ENV:
+                  - regex: stag
+                    highlightGroup: "information:priority"
+                  - regex: devel
+                    highlightGroup: "information:regular"
+                  - regex: prod
+                    highlightGroup: "warning:regular"
+    - name: bash
+      config:
+          commands:
+              date:
+                  cmd: "date"
+                  interval: 30
+                  highlightGroup: "information:regular"
+              kubeContext:
+                  cmd: "kubectl config get-contexts --no-headers | grep '*' | awk '{ print $3 }'"
+                  interval: 5
+                  highlightGroup: "gwl:kube_context"
+              apt:
+                  cmd: 'upgradable=$(apt list --upgradable -qq 2>/dev/null | wc -l); if [ ${upgradable} -gt 0 ]; then echo "📦 ${upgradable}"; fi;'
+                  interval: 30
+                  highlightGroup: "gwl:apt"
