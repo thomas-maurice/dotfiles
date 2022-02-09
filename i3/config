@@ -62,7 +62,8 @@ bindsym $mod+Shift+q kill
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -config /usr/share/rofi/themes/Monokai.rasi
-bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config /usr/share/rofi/themes/Monokai.rasi
+# bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config /usr/share/rofi/themes/Monokai.rasi
+bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config ~/.config/rofi/launcher/text/style_4.rasi
 
 # change focus
 bindsym $mod+j focus left
@@ -89,10 +90,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split v; notify-send 'window splitting' 'horizontal' -t 1000
+bindsym $mod+h split vertical
 
 # split in vertical orientation
-bindsym $mod+v split h; notify-send 'window splitting' 'vertical' -t 1000
+bindsym $mod+v split horizontal
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -192,4 +193,3 @@ bar {
 }
 
 exec_always --no-startup-id ~/.session-start.sh
-

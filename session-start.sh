@@ -30,3 +30,5 @@ if [ -d ~/autostart.d ]; then
         source "${f}" >> ~/autostart.d/log
     done;
 fi;
+
+if [ -f ~/.screenlayout/layout.sh ]; then bash ~/.screenlayout/layout.sh; fi

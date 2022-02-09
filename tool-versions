@@ -5,7 +5,6 @@ vault 1.8.5
 consul 1.6.2
 terraform 0.14.3
 kubectl 1.19.7
-gohugo extended_0.82.0
 minio 2021-01-05T05-22-38Z
 mc 2020-07-17T02-52-20Z
 helm 3.4.0

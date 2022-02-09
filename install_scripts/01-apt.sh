@@ -86,11 +86,10 @@ sudo apt-get install -y \
 
 sudo apt-get install -y \
     gnome-tweaks \
-    gnome-shell-extension-show-ip \
     gnome-shell-extension-system-monitor \
     gnome-shell-extensions \
     gnome-shell-extension-caffeine \
     gnome-shell-extension-hard-disk-led \
     gnome-shell-extension-hide-veth \
     gnome-shell-extension-redshift \
-    gnome-shell-extension-weather 
+    gnome-shell-extension-weather
