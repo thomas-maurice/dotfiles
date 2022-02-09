@@ -5,11 +5,13 @@ bierner.markdown-emoji
 bierner.markdown-preview-github-styles
 bierner.markdown-yaml-preamble
 binhonglee.vscode-vugu
+christian-kohler.npm-intellisense
 CoenraadS.bracket-pair-colorizer
 CoenraadS.bracket-pair-colorizer-2
 coolbear.systemd-unit-file
 dbaeumer.vscode-eslint
 eamodio.gitlens
+eg2.vscode-npm-script
 Equinusocio.vsc-community-material-theme
 Equinusocio.vsc-material-theme
 equinusocio.vsc-material-theme-icons
@@ -19,7 +21,10 @@ formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 golang.go
 hashicorp.terraform
+hollowtree.vue-snippets
 James-Yu.latex-workshop
+johnsoncodehk.volar
+johnsoncodehk.vscode-typescript-vue-plugin
 jtavin.ldif
 justusadam.language-haskell
 ms-azuretools.vscode-azureterraform
@@ -29,6 +34,7 @@ ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
 ms-vscode.azure-account
 ms-vscode.cpptools
