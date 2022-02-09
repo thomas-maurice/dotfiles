@@ -15,11 +15,11 @@ sudo apt-get install -y \
     libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev \
     libasound2-dev libpulse-dev i3-wm \
     libjsoncpp-dev libmpdclient-dev \
-    libcurl4-openssl-dev libnl-genl-3-dev
+    libcurl4-openssl-dev libnl-genl-3-dev libuv1-dev
 
 if ! [ -d ~/.compile/polybar ]; then git clone --recursive https://github.com/polybar/polybar ~/.compile/polybar; fi
-(cd ~/.compile/polybar && ./build.sh -A --all-features -f -C -g -j 4)
+(cd ~/.compile/polybar && ./build.sh -A --all-features -f -g -j 4)
 
-if ! [ -d ~/.config/polybar ]; then mkdir ~/.config/polybar; cp /usr/local/share/doc/polybar/config ~/.config/polybar; fi
+if ! [ -d ~/.config/polybar ]; then mkdir ~/.config/polybar; cp /usr/local/share/doc/polybar/examples/config.ini ~/.config/polybar; fi
 
 fi;
