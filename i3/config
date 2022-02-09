@@ -38,7 +38,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Screen brightness controls with notification
-bindsym XF86MonBrightnessUp exec "light -A 5; notify-send 'brightness up'" 
+bindsym XF86MonBrightnessUp exec "light -A 5; notify-send 'brightness up'"
 bindsym XF86MonBrightnessDown exec "light -U 5; notify-send 'brightness down'"
 
 bindsym XF86AudioPlay exec playerctl play
@@ -63,7 +63,7 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 # bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -config /usr/share/rofi/themes/Monokai.rasi
 # bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config /usr/share/rofi/themes/Monokai.rasi
-bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config ~/.config/rofi/launcher/text/style_4.rasi
+bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun -show combi -modi combi -show-icons -config ~/.config/rofi/launchers/text/style_4.rasi
 
 # change focus
 bindsym $mod+j focus left
@@ -90,10 +90,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split vertical
+bindsym $mod+h split vertical; exec notify-send -t 1000 'vertical split'
 
 # split in vertical orientation
-bindsym $mod+v split horizontal
+bindsym $mod+v split horizontal; exec notify-send -t 'horizontal split'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle

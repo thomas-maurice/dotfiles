@@ -32,3 +32,5 @@ if [ -d ~/autostart.d ]; then
 fi;
 
 if [ -f ~/.screenlayout/layout.sh ]; then bash ~/.screenlayout/layout.sh; fi
+(sleep 2 && ~/.config/polybar/launch.sh ) &
+(sleep 2 && feh --bg-scale ~/Pictutres/wallpaper.jpg ) &
