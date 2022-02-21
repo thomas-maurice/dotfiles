@@ -1,10 +1,8 @@
-URxvt.font:                 xft:DejaVu Sans Mono for Powerline:size=8:Regular
-URxvt.boldFont:             xft:DejaVu Sans Mono for Powerline:size=8:Bold
-URxvt.italicFont:           xft:DejaVu Sans Mono for Powerline:size=8:Italic
-URxvt.boldItalicFont:       xft:DejaVu Sans Mono for Powerline:size=8:Bold:Italic
+URxvt.font:                 xft:DejaVu Sans Mono for Powerline:size=10:Regular,xft:Symbola
+URxvt.boldFont:             xft:DejaVu Sans Mono for Powerline:size=10:Bold,xft:Symbola
+URxvt.italicFont:           xft:DejaVu Sans Mono for Powerline:size=10:Italic,xft:Symbola
+URxvt.boldItalicFont:       xft:DejaVu Sans Mono for Powerline:size=10:Bold:Italic,xft:Symbola
 
-urxvt*foreground: white
-urxvt*background: black
 
 *color0:  #2E3436
 *color1:  #a40000
@@ -33,11 +31,10 @@ URxvt.saveline: 10000
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
-URxvt.depth: 24
 
 !! Common Keybinds for Navigations
-URxvt.keysym.Shift-Up: command:\033]720;1\007
-URxvt.keysym.Shift-Down: command:\033]721;1\007
+!!URxvt.keysym.Shift-Up: command:\033]720;1\007
+!!URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt.keysym.Control-Up: \033[1;5A
 URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
@@ -52,5 +49,8 @@ URxvt.iso14755_52: false
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
 
-urxvt*transparent: true
 urxvt*shading: 15
+URxvt.depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
+URxvt*foreground: #ffffff
+

@@ -32,5 +32,9 @@ if [ -d ~/autostart.d ]; then
 fi;
 
 if [ -f ~/.screenlayout/layout.sh ]; then bash ~/.screenlayout/layout.sh; fi
+
 (sleep 2 && ~/.config/polybar/launch.sh ) &
-(sleep 2 && feh --bg-scale ~/Pictutres/wallpaper.jpg ) &
+(sleep 2 && feh --bg-scale ~/Pictures/wallpaper.jpg ) &
+(sleep 3 && compton ) &
+(sleep 3 && systemctl start --user gowerline ) &
+(sleep 3 && ~/.config/conky/launch.sh ) &
