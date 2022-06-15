@@ -1,7 +1,7 @@
 [user]
     email = thomas@maurice.fr
     name = "Thomas Maurice"
-    signingkey = "0x899057BD33B8A400"
+    signingkey = "0x1A55753096B00112"
 [push]
 	default = simple
 [commit]
