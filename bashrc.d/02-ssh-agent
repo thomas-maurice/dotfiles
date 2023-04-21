@@ -3,7 +3,8 @@
 ensure_ssh_agent () {
     if [ -f ~/.ssh/agent.env ] ; then
         . ~/.ssh/agent.env > /dev/null
-        if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
+        #if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
+        if ! pgrep ssh-agent | grep $(grep SSH_AGENT_PID ~/.ssh/agent.env | sed -e 's/^.*SSH_AGENT_PID=\([0-9]*\);.*$/\1/g') 2>&1>>/dev/null; then
             echo "Stale agent file found. Spawning a new agent. "
             eval $(ssh-agent | tee ~/.ssh/agent.env)
         fi

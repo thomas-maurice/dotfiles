@@ -12,6 +12,7 @@ sudo apt-get install -y \
     lxappearance \
     arandr \
     fonts-symbola \
+    fonts-font-awesome \
     rxvt-unicode
 
 if ! [ -d ~/.config/i3 ]; then mkdir ~/.config/i3; fi
